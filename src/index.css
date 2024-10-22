@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  body {
+    @apply bg-secondy text-white;
+    font-family: "Raleway", sans-serif;
+  }
+}
+
+
+
+@layer components {
+
+}
+
+@layer utilities {
+  .container {
+    @apply   mx-auto sm:px-1 md:px-28 lg:px-11 xl:px-36 2xl:px-36 ;
+  }
+.nav-active-item {
+  @apply relative text-primary before:block before:h-[2px] before:w-full  before:bg-primary before:absolute before:bottom-0 before:transition-all	 before:ease-in-out	before:duration-700 duration-700;
+}
+
+
+
+}
