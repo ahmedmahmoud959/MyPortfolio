@@ -4,20 +4,21 @@ export const MyStyle = {
   menubar: {
     root: {
       className: classNames(
-        " bg-transparent	 text-white sticky top-0 left-0 z-50",
-        "flex lg:justify-end justify-center items-center relative"
+        " bg-secondy-op	w-full  text-white sticky top-0 left-0 z-50",
+        "flex lg:justify-end sm:justify-center justify-end items-center relative",
+        "container-menu backdrop-blur-md	"
       ),
     },
     menu: ({ state }) => ({
       className: classNames(
-        "m-0 sm:p-0 list-none ",
+        "m-0 sm:p-0 list-none bg-secondy ",
         "outline-none",
         "sm:flex items-center gap-x-7 flex-wrap sm:flex-row sm:top-auto sm:left-auto sm:relative sm:bg-transparent sm:shadow-none sm:w-auto",
         "flex-col top-full left-0",
-        "absolute pt-2 pb-1 border-0 shadow-md w-full",
+        "absolute pt-3 pb-1 border-0 shadow-md w-full",
         {
           "hidden ": !state?.mobileActive,
-          "flex ": state?.mobileActive,
+          "flex px-5": state?.mobileActive,
         }
       ),
     }),
@@ -29,7 +30,7 @@ export const MyStyle = {
 
         { "rounded-md": props.root },
         {
-          "text-white dark:text-white": !context.active,
+          "text-white dark:text-white font-semibold": !context.active,
           "text-primary dark:text-primary  after:block after:scale-x-100 after:h-[2px] after:w-full  after:bg-primary after:absolute after:bottom-0 after:transition-all	 after:ease-in-out	after:duration-300 duration-300":
             context.active,
         },
@@ -69,13 +70,12 @@ export const MyStyle = {
         }
       ),
     }),
-    separator: "border-t border-gray-300 dark:border-blue-900/40 my-1",
+    separator: "border-t border-gray-300 dark:border-blue-900/40 my-1 ",
     button: {
       className: classNames(
-        "flex sm:hidden w-8 h-8 rounded-full text-gray-600 dark:text-white/80 transition duration-200 ease-in-out",
+        "flex sm:hidden text-2xl mr-5 w-8 h-8 rounded-md text-white dark:text-white/80 transition border border-transparent duration-200 ease-in-out",
         "cursor-pointer flex items-center justify-center no-underline",
-        "hover:text-gray-700 dark:hover:text-white/80 hover:bg-gray-200 dark:hover:bg-gray-800/80 ",
-        "focus:outline-none focus:outline-offset-0 focus:shadow-[0_0_0_0.2rem_rgba(191,219,254,1)] dark:focus:shadow-[0_0_0_0.2rem_rgba(147,197,253,0.5)]"
+        "hover:text-primary dark:hover:text-white/80 hover:bg-secondy hover:border-primary  dark:hover:bg-gray-800/80 "
       ),
     },
   },
@@ -217,4 +217,94 @@ export const MyStyle = {
       }),
     }),
   },
+
+  chip: {
+    root: {
+      className: classNames(
+        "inline-flex items-center",
+        "bg-secondy text-primary rounded-[16px] border border-primary-op px-3 dark:text-white/80 dark:bg-gray-900"
+      ),
+    },
+    label: "leading-6",
+    icon: "leading-6 mr-1 text-sm",
+    image: {
+      className: classNames("w-9 h-9 ml-[-0.75rem] mr-2", "rounded-full"),
+    },
+    removeIcon: {
+      className: classNames(
+        "ml-2 rounded-md transition duration-200 ease-in-out",
+        "cursor-pointer leading-6"
+      ),
+    },
+  },
+
+  dialog: {
+    root: ({ state }) => ({
+        className: classNames('rounded-lg shadow-lg border-0', 'max-h-[90%] transform scale-100', 'm-0 w-[50vw]', 'dark:border dark:border-blue-900/40', {
+            'transition-none transform-none !w-screen !h-screen !max-h-full !top-0 !left-0': state.maximized
+        })
+    }),
+    header: {
+        className: classNames('flex items-center justify-between shrink-0', 'bg-white text-gray-800 border-t-0  rounded-tl-lg rounded-tr-lg p-6', 'dark:bg-gray-900  dark:text-white/80')
+    },
+    headerTitle: 'font-bold text-lg',
+    headerIcons: 'flex items-center',
+    closeButton: {
+        className: classNames(
+            'flex items-center justify-center overflow-hidden relative',
+            'w-8 h-8 text-gray-500 border-0 bg-transparent rounded-full transition duration-200 ease-in-out mr-2 last:mr-0',
+            'hover:text-gray-700 hover:border-transparent hover:bg-gray-200',
+            'focus:outline-none focus:outline-offset-0 focus:shadow-[0_0_0_0.2rem_rgba(191,219,254,1)]', // focus
+            'dark:hover:text-white/80 dark:hover:border-transparent dark:hover:bg-gray-800/80 dark:focus:shadow-[inset_0_0_0_0.2rem_rgba(147,197,253,0.5)]'
+        )
+    },
+    closeButtonIcon: 'w-4 h-4 inline-block',
+    content: ({ state }) => ({
+        className: classNames('overflow-y-auto', 'bg-white text-gray-700 px-6 pb-8 pt-0', 'rounded-bl-lg rounded-br-lg', 'dark:bg-gray-900  dark:text-white/80 ', {
+            grow: state.maximized
+        })
+    }),
+    footer: {
+        className: classNames('shrink-0 ', 'border-t-0 bg-white text-gray-700 px-6 pb-6 text-right rounded-b-lg', 'dark:bg-gray-900  dark:text-white/80')
+    },
+    mask: ({ state }) => ({
+        className: classNames('transition duration-200', { 'bg-black/40': state.containerVisible })
+    }),
+    transition: ({ props }) => {
+        return props.position === 'top'
+            ? {
+                  enterFromClass: 'opacity-0 scale-75 translate-x-0 -translate-y-full translate-z-0',
+                  enterActiveClass: 'transition-all duration-200 ease-out',
+                  leaveActiveClass: 'transition-all duration-200 ease-out',
+                  leaveToClass: 'opacity-0 scale-75 translate-x-0 -translate-y-full translate-z-0'
+              }
+            : props.position === 'bottom'
+            ? {
+                  enterFromClass: 'opacity-0 scale-75 translate-y-full',
+                  enterActiveClass: 'transition-all duration-200 ease-out',
+                  leaveActiveClass: 'transition-all duration-200 ease-out',
+                  leaveToClass: 'opacity-0 scale-75 translate-x-0 translate-y-full translate-z-0'
+              }
+            : props.position === 'left' || props.position === 'top-left' || props.position === 'bottom-left'
+            ? {
+                  enterFromClass: 'opacity-0 scale-75 -translate-x-full translate-y-0 translate-z-0',
+                  enterActiveClass: 'transition-all duration-200 ease-out',
+                  leaveActiveClass: 'transition-all duration-200 ease-out',
+                  leaveToClass: 'opacity-0 scale-75  -translate-x-full translate-y-0 translate-z-0'
+              }
+            : props.position === 'right' || props.position === 'top-right' || props.position === 'bottom-right'
+            ? {
+                  enterFromClass: 'opacity-0 scale-75 translate-x-full translate-y-0 translate-z-0',
+                  enterActiveClass: 'transition-all duration-200 ease-out',
+                  leaveActiveClass: 'transition-all duration-200 ease-out',
+                  leaveToClass: 'opacity-0 scale-75 opacity-0 scale-75 translate-x-full translate-y-0 translate-z-0'
+              }
+            : {
+                  enterFromClass: 'opacity-0 scale-75',
+                  enterActiveClass: 'transition-all duration-200 ease-out',
+                  leaveActiveClass: 'transition-all duration-200 ease-out',
+                  leaveToClass: 'opacity-0 scale-75'
+              };
+    }
+}
 };

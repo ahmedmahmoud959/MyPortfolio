@@ -1,23 +1,23 @@
 function AboutMe() {
   return (
     <section
-      id="about=me"
-      className="container pt-40 grid grid-cols-1 lg:grid-cols-2 sm:grid-cols-1 md:grid-cols-1 gap-10 content-center "
+      id="about-me"
+      className="h-dvh bg-[url('https://res.cloudinary.com/dbtk2voyv/image/upload/v1729883342/mohammad-rahmani-8qEB0fTe9Vw-unsplash_kz0qer.webp')] bg-fixed relative bg-transparent"
     >
-      <div className="self-center pt-20 hidden lg:block sm:hidden md:hidden">
-        <img
-          src="https://res.cloudinary.com/dbtk2voyv/image/upload/v1729612405/pexels-goumbik-574071_1_1_y77hue.webp"
-          alt="image-1"
-          className="object-cover border-[3px] border-primary shadow-md shadow-primary rounded-lg "
-        />
-      </div>
-      <div className="">
-        <div>
-          <h3 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold sm:text-orange-400 md:text-cyan-400 lg:text-red-400 xl:text-indigo-400 2xl:text-lime-400">
-            About Me
-          </h3>
-          <p className="block mt-9 text-font-gray text-base lg:leading-8 xl:leading-9 sm:text-lg md:text-xl font-normal text-wrap text-justify tracking-widest leading-7 sm:leading-8 md:leading-9 px-3 sm:px-3 md:px-0">
-            {`a passionate web developer with one year of experience in building and
+      {/* <img
+        src="https://res.cloudinary.com/dbtk2voyv/image/upload/v1729883342/mohammad-rahmani-8qEB0fTe9Vw-unsplash_kz0qer.webp"
+        alt="image-1"
+        className="object-cover  w-full h-full absolute top-0 left-0 z-[0]"
+      /> */}
+      <div className="w-full h-full pt-20 pb-20  back-blur bg-secondy-op">
+        <div className="container  h-full flex justify-center items-center content-center	">
+          <div className="w-full ">
+            <div>
+              <h3 className="text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                About Me
+              </h3>
+              <p className="block mt-9 text-white font-semibold text-base lg:leading-10 xl:leading-10 sm:text-lg md:text-xl  text-wrap text-justify tracking-widest leading-7 sm:leading-8  px-3 sm:px-3 md:px-0">
+                {`a passionate web developer with one year of experience in building and
         developing websites and web applications. Over the past year, I've
         worked on a variety of projects that include designing and developing
         interactive and user-friendly websites. I am always eager to learn and
@@ -25,7 +25,9 @@ function AboutMe() {
         challenges that help me refine my skills and expand my experience. My
         goal is to use my knowledge and passion to create websites and web
         applications that improve people's lives and businesses.`}
-          </p>
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -33,3 +35,4 @@ function AboutMe() {
 }
 
 export default AboutMe;
+

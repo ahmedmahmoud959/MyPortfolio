@@ -14,10 +14,18 @@ export default {
       colors: {
         primary: "#FFBD39",
         secondy: "#1E242B",
+        subPrimary:"#fda900",
+        "primary-op": "rgb(255, 189, 57 ,0.4)",
+        "secondy-op": "rgba(30, 36, 43, 0.4)",
+        "primary-grad":
+          "linear-gradient(to top, #FFF5DB 0%, #FFC765 42%, #FFBD39 78%);",
         "font-gray": "#B6B6B6",
+        
+      },
+      height: {
+        'hero': 'calc(100dvh - 40px)',
       },
     },
-
   },
   plugins: [],
 };

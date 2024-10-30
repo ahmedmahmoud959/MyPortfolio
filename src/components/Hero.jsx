@@ -49,8 +49,8 @@ function Hero() {
     //   </div>
     // </section>
 
-    <section id="Hero" className="container pt-20">
-      <div className="flex flex-col-reverse items-center gap-x-2 lg:flex-row flex-wrap lg:justify-between gap-y-3 sm:justify-center text-center lg:text-left">
+    <section id="Hero" className="container min-w-0 lg:h-hero pt-14 pb-20">
+      <div className="h-full flex flex-col-reverse justify-center items-center gap-x-2 lg:flex-row flex-wrap lg:justify-between gap-y-3 sm:justify-center text-center lg:text-left">
         <div className="flex flex-col pt-12 items-center lg:items-start">
           <h3 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
             Hi, I am

@@ -6,10 +6,16 @@
 
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+    @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:p-3 [&::-webkit-scrollbar-track]:backdrop-blur-[4px] [&::-webkit-scrollbar-track]:bg-primary-op/10 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+
+  }
   body {
     @apply bg-secondy text-white;
     font-family: "Raleway", sans-serif;
   }
+ 
 }
 
 
@@ -19,11 +25,61 @@
 }
 
 @layer utilities {
-  .container {
-    @apply   mx-auto px-1 sm:px-1 md:px-28 lg:px-[.5rem] xl:px-36 2xl:px-36 ;
+  .scroll-bar-custom{
+
   }
+  .container {
+    @apply   mx-auto px-1 sm:px-1 md:px-20 lg:px-[.5rem] xl:px-36 2xl:px-36 ;
+  }
+
+  .container-menu{
+    @apply    px-1 sm:px-1 md:px-20 lg:px-[.5rem] xl:px-36 2xl:px-36 ;
+
+  }
+  
 .nav-active-item {
   @apply relative text-primary before:block before:h-[2px] before:w-full  before:bg-primary before:absolute before:bottom-0 before:transition-all	 before:ease-in-out	before:duration-700 duration-700;
 }
 
+
+.clip-overlay {
+  clip-path: polygon(0 0, 50% 0, 75% 100%, 0 100%);
+}
+.clip-overlay-reverse-10 {
+  clip-path: polygon( 0 0, 90% 0, 90% 100%, 0 100%);
+}
+.clip-overlay-reverse {
+  clip-path: polygon( 0 0, 80% 0, 80% 100%, 0 100%);
+}
+.back-blur {
+  backdrop-filter: blur(5px);
+
+}
+
+.rotate-flip {
+  transform: rotatey(180deg);
+  -webkit-transform: rotatey(180deg);
+  -moz-transform: rotatey(180deg);
+  -ms-transform: rotatey(180deg);
+  -o-transform: rotatey(180deg);
+}
+.primary-grad {
+  background: #FFF5DB;
+  background: linear-gradient(to top, #FFF5DB 0%, #FFC765 42%, #FFBD39 78%);
+}
+.grad-card-content {
+  background: rgb(253,169,0);
+  background: linear-gradient(260deg, rgba(253,169,0,1) 19%, rgba(255,189,57,1) 91%, rgba(255,255,255,1) 100%);
+}
+
+.text-shadow {
+  text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.2);
+}
+
+
+.custom-scrollbar {
+  scroll-behavior: smooth;
+  @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:p-3 [&::-webkit-scrollbar-track]:backdrop-blur-[4px] [&::-webkit-scrollbar-track]:bg-primary-op/10 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
+
+}
 }
