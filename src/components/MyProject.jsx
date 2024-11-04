@@ -1,9 +1,9 @@
 import { portfolio } from "../data/data";
 import Card from "./project-card/Card";
-import Modal from "./project-modal/Modal";
-
 function MyProject() {
   const projectData = portfolio;
+
+
   const cardData = projectData.map((data) => (
     <Card key={data.id} data={data} />
   ));
@@ -24,7 +24,7 @@ function MyProject() {
           </div>
         </div>
       </div>
-      <Modal />
+
     </section>
   );
 }

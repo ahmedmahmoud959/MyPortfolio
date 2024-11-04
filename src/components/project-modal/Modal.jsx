@@ -1,19 +1,18 @@
 import { Fragment } from "react";
 import { Dialog } from "primereact/dialog";
 import { useState } from "react";
-import { portfolio } from "../../data/data";
 import ReactPlayer from "react-player";
 import { Chip } from "primereact/chip";
-import { Link } from "react-router-dom";
 import { PiPlanetFill } from "react-icons/pi";
 import { FaGithub } from "react-icons/fa6";
+import { useEffect } from "react";
 
-function Modal() {
-  const projectData = portfolio[0];
-  const [visible, setVisible] = useState(true);
+function Modal({ status, data, onHide }) {
+  const projectData = data;
+  const [visible, setVisible] = useState(false);
 
   const modalContent = ({ hide }) => (
-    <div className="p-5 h-[90dvh] bg-secondy w-full flex flex-col justify-start border rounded-md border-primary-op ">
+    <div className="p-5 h-[90dvh] bg-secondy w-full flex flex-col justify-start border rounded-md border-primary-op  ">
       <div className="flex justify-between items-start w-full pb-6">
         <h5 className="text-white text-3xl font-bold">{projectData.title}</h5>
 
@@ -30,23 +29,27 @@ function Modal() {
             {projectData.link && (
               <span className="block mb-3 text-base group hover:cursor-pointer">
                 <PiPlanetFill className="mr-2 text-primary text-3xl inline-block align-middle" />
-                <Link
-                  to={projectData.link}
+                <a
+                  href={projectData.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-base align-middl font-bold group-hover:text-primary group-hover:underline group-hover:decoration-primary group-hover:decoration-2 transition-all duration-500 ease-in-out	"
                 >
                   {projectData.link}
-                </Link>
+                </a>
               </span>
             )}
             {projectData.githubLink && (
               <span className="block mb-3 text-base group hover:cursor-pointer">
                 <FaGithub className="mr-2 text-primary text-3xl inline-block align-middle" />
-                <Link
-                  to={projectData.githubLink}
+                <a
+                  href={projectData.githubLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-base align-middl font-bold group-hover:text-primary group-hover:underline group-hover:decoration-primary group-hover:decoration-2 transition-all duration-500 ease-in-out	"
                 >
                   {projectData.githubLink}
-                </Link>
+                </a>
               </span>
             )}
             <h6 className="block text-primary text-xl font-bold ">
@@ -65,7 +68,7 @@ function Modal() {
                 <Chip
                   key={`${skill}-${index}`}
                   label={skill}
-                  className="py-1 text-white bg-primary/15 border-none"
+                  className="py-1 !text-white !bg-primary/15 border-none"
                 />
               ))}
             </div>
@@ -101,11 +104,8 @@ function Modal() {
     <Fragment>
       <Dialog
         header="Header"
-        visible={visible}
-        onHide={() => {
-          if (!visible) return;
-          setVisible(false);
-        }}
+        visible={status}
+        onHide={onHide}
         style={{ width: "90vw" }}
         content={modalContent}
       ></Dialog>

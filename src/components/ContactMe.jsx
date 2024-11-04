@@ -15,7 +15,7 @@ function ContactMe() {
             Contact ME
           </h2>
           <h3 className="mt-14 text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">{`Let's Work Together !`}</h3>
-          <div className="flex justify-between mt-10 gap-x-5 text-center text-3xl sm:text-3xl md:text-4xl lg:text-5xl  text-white w-fit my-6">
+          <div className="flex justify-between mt-10 gap-x-5 text-center text-2xl sm:text-2xl md:text-3xl lg:text-4xl  text-white w-fit my-6">
             <Link className="hover:text-primary">
               <FaGoogle />
             </Link>
@@ -29,7 +29,7 @@ function ContactMe() {
               <FaWhatsapp />
             </Link>
           </div>
-          <div className="flex justify-between mt-10 gap-x-5 text-center text-xl  text-white w-fit my-6">
+          <div className="flex justify-between mt-10 gap-x-5 text-center text-base  text-white w-fit my-6">
             <a className="hover:text-primary" href="#home">
               Home
             </a>

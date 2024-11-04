@@ -82,4 +82,5 @@
   @apply [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar]:p-3 [&::-webkit-scrollbar-track]:backdrop-blur-[4px] [&::-webkit-scrollbar-track]:bg-primary-op/10 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-primary dark:[&::-webkit-scrollbar-track]:bg-neutral-700 dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500
 
 }
+
 }

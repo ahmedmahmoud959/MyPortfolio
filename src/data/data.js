@@ -5,8 +5,11 @@ export const portfolio = [
     description: `Tradesphere is an e-commerce website designed to provide users with a seamless shopping experience. The platform allows users to browse a wide range of products easily, filter by categories and prices, and use an integrated shopping cart that enables product additions, quantity adjustments, and tracking of total costs.
     <br>
     <br>
-      I contributed to developing this website as part of a team within the <b> Digital Egypt Pioneers Initiative (DEPI)</b>. We focused on implementing the core features of the platform to deliver a high-quality, user-friendly shopping experience, supporting digital transformation in Egypt and advancing e-commerce in innovative ways.
-      
+      I contributed to developing this website as part of a team within the <b> Digital Egypt Pioneers Initiative (DEPI)</b>. We focused on implementing the core features of the platform to deliver a high-quality, user-friendly shopping experience.
+    <br>
+    <br>
+    In this project, I was responsible for developing some of the core front-end components using the PrimeReact library. I created the DataTable on the Admin page to facilitate product management, while I implemented the Dropdown Menu with filtering options on the Category products page that customers browse. I also enabled pagination (Paginator) to enhance content navigation. Additionally, I utilized the React Dropzone library to allow users to easily upload images. Furthermore, I contributed to other parts of the website and designed the logo to reflect the project's identity.
+
       `,
     techStack: [
       "html",
@@ -66,14 +69,13 @@ export const portfolio = [
       "chartjs",
       "frontend development",
       "user experience design",
-      "javascript",
     ],
     images: [
       "https://res.cloudinary.com/dbtk2voyv/image/upload/v1730213577/Screenshot_from_2024-06-29_20-58-59_rs2ldp.webp",
       "https://res.cloudinary.com/dbtk2voyv/image/upload/v1730213578/Screenshot_from_2024-06-29_20-59-48_b8n6zj.webp",
       "https://res.cloudinary.com/dbtk2voyv/image/upload/v1730213577/Screenshot_from_2024-06-29_20-59-17_b5f17n.webp",
     ],
-    video: "https://www.youtube.com/watch?v=BOG4rE4gvJY",
+    video: "",
     link: "",
     githubLink: "",
     date: "2022-01-01",
@@ -84,11 +86,22 @@ export const portfolio = [
     description:
       "I designed contemporary login and registration pages with a clean, user-friendly interface. The layouts are fully responsive, ensuring seamless accessibility across various screen sizes, from desktops to mobile devices. Each form is optimized for ease of use, guiding users smoothly through account creation and login processes, while maintaining a cohesive, modern aesthetic.",
     techStack: ["html", "css", "javascript", "bootstrap"],
+    skills: [
+      "html",
+      "css",
+      "javascript",
+      "jquery",
+      "bootstrap",
+      "chartjs",
+      "frontend development",
+      "user experience design",
+      
+    ],
     images: [
       "https://res.cloudinary.com/dbtk2voyv/image/upload/v1730213589/login_nevxcb.webp",
       "https://res.cloudinary.com/dbtk2voyv/image/upload/v1730213589/signup_em1lqf.webp",
     ],
-    video: "https://www.youtube.com/embed/watch?v=BOG4rE4gvJY",
+    video: "",
     link: "",
     githubLink: "",
     date: "2022-01-01",
