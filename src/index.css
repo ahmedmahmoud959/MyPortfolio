@@ -83,4 +83,11 @@
 
 }
 
+@media (max-height: 661px) {
+  .hero-h-custome {
+    height: auto !important;/* التغيير الذي تريده */
+    
+  }
+}
+
 }

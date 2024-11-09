@@ -10,7 +10,7 @@ function MyProject() {
 
   return (
     <section id="my-projects" className="relative bg-transparent">
-      <div className="w-full h-full pt-32 pb-28 bg-secondy">
+      <div className="w-full h-full pt-20 pb-28 bg-secondy">
         <div className="container flex justify-start">
           <div className="w-full">
             <div>

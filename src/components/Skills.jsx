@@ -4,11 +4,6 @@ function Skills() {
       id="skills"
       className=" h-dvh relative  md:bg-gradient-to-b from-primary via-yellow-300 to-primary "
     >
-      {/* <img
-        src="https://images.pexels.com/photos/2333293/pexels-photo-2333293.jpeg?auto=compress&cs=tinysrgb&w=600"
-        alt="image-2"
-        className="object-fill object-left-bottom w-full h-full absolute top-0 left-0 z-[0]"
-      /> */}
 
       <div className="w-full h-full pt-20 pb-20  md:w-10/12 bg-secondy">
         <div className="container  flex justify-start">
